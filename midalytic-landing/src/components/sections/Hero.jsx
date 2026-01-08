@@ -18,11 +18,25 @@ const Hero = () => {
                         Midalytic ayuda a las empresas a crecer y tener éxito a través de landing pages diseñadas por expertos y soluciones de software personalizadas adaptadas a sus necesidades únicas.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-bold transition-all transform hover:scale-105 shadow-lg shadow-primary/25">
-                            Obtén una Cotización
-                        </button>
-                        <button className="bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 px-8 py-3 rounded-lg font-bold hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+                        <button
+                            onClick={() => {
+                                window.scrollTo({
+                                    top: document.getElementById("portfolio").offsetTop,
+                                    behavior: "smooth"
+                                });
+                            }}
+                            className="bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 px-8 py-3 rounded-lg font-bold hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
                             Ver Portafolio
+                        </button>
+                        <button
+                            onClick={() => {
+                                window.scrollTo({
+                                    top: document.getElementById("contact").offsetTop,
+                                    behavior: "smooth"
+                                });
+                            }}
+                            className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-bold transition-all transform hover:scale-105 shadow-lg shadow-primary/25">
+                            Obtén una Cotización
                         </button>
                     </div>
                 </motion.div>

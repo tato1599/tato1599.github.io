@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap');
 
+@font-face {
+  font-family: 'Lemontea';
+  src: url('./assets/fonts/Lemontea.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

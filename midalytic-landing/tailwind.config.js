@@ -14,6 +14,7 @@ export default {
       },
       fontFamily: {
         display: ["Manrope", "sans-serif"],
+        lemontea: ["Lemontea", "cursive"],
       },
     },
   },

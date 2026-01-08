@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Twitter, Linkedin, Mail, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -21,9 +22,9 @@ const Footer = () => {
                             Transformamos ideas en experiencias digitales excepcionales. Su socio de confianza para el desarrollo de software y diseño web.
                         </p>
                         <div className="flex gap-4">
-                            <a href="#" className="text-slate-400 hover:text-primary transition-colors"><Facebook size={20} /></a>
-                            <a href="#" className="text-slate-400 hover:text-primary transition-colors"><Twitter size={20} /></a>
-                            <a href="#" className="text-slate-400 hover:text-primary transition-colors"><Linkedin size={20} /></a>
+                            <a href="https://www.facebook.com/profile.php?id=61584286157794" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-colors"><Facebook size={20} /></a>
+                            {/* <a href="#" className="text-slate-400 hover:text-primary transition-colors"><Twitter size={20} /></a>
+                            <a href="#" className="text-slate-400 hover:text-primary transition-colors"><Linkedin size={20} /></a> */}
                         </div>
                     </div>
 
@@ -31,10 +32,10 @@ const Footer = () => {
                     <div>
                         <h4 className="text-slate-900 dark:text-white font-bold mb-6">Enlaces Rápidos</h4>
                         <ul className="space-y-3">
-                            <li><a href="#services" className="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors">Servicios</a></li>
-                            <li><a href="#portfolio" className="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors">Portafolio</a></li>
-                            <li><a href="#about" className="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors">Nosotros</a></li>
-                            <li><a href="#contact" className="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors">Contacto</a></li>
+                            <li><a href="/#services" className="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors">Servicios</a></li>
+                            <li><a href="/#portfolio" className="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors">Portafolio</a></li>
+                            <li><a href="/#about" className="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors">Nosotros</a></li>
+                            <li><a href="/#contact" className="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors">Contacto</a></li>
                         </ul>
                     </div>
 
@@ -55,11 +56,11 @@ const Footer = () => {
                         <ul className="space-y-4">
                             <li className="flex items-center gap-3 text-slate-500 dark:text-slate-400 text-sm">
                                 <Mail size={18} className="text-primary" />
-                                <a href="mailto:contact@midalytic.com" className="hover:text-primary transition-colors">contact@midalytic.com</a>
+                                <a href="mailto:contact@midalytic.com" className="hover:text-primary transition-colors">contacto@midalytic.me</a>
                             </li>
                             <li className="flex items-center gap-3 text-slate-500 dark:text-slate-400 text-sm">
                                 <Phone size={18} className="text-primary" />
-                                <a href="tel:+1234567890" className="hover:text-primary transition-colors">+1 (234) 567-890</a>
+                                <a href="tel:+1234567890" className="hover:text-primary transition-colors">(656) 123-2570</a>
                             </li>
                         </ul>
                     </div>
@@ -67,11 +68,11 @@ const Footer = () => {
 
                 <div className="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-slate-500 dark:text-slate-400 text-sm text-center md:text-left">
-                        © 2024 Midalytic. Todos los derechos reservados.
+                        © 2026 Midalytic. Todos los derechos reservados.
                     </p>
                     <div className="flex gap-6 text-sm text-slate-500 dark:text-slate-400">
-                        <a href="#" className="hover:text-primary transition-colors">Privacidad</a>
-                        <a href="#" className="hover:text-primary transition-colors">Términos</a>
+                        <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacidad</Link>
+                        <Link to="/terms-and-conditions" className="hover:text-primary transition-colors">Términos</Link>
                     </div>
                 </div>
             </div>
