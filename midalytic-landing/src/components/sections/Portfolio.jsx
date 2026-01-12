@@ -5,25 +5,36 @@ import { ExternalLink, Github } from 'lucide-react';
 const Portfolio = () => {
     const projects = [
         {
+            title: "Burger & Zen",
+            category: "Landing Page",
+            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDo7j-UHW3vGuNVFnTC8liotEsqmE9S60tY7yBZBZQnQJ2dXhT2He8hL9Nt-t9DuTZItSyPWxGAdf79y183MiTeh2jwMyBmiNrYkHdZmXRt4iwZHpYV5XT0QOPY_pfbOo79htdSdTzK3uy7wjifeTZZCgz3DXs_psvxRKROklMRUgNb83MRlt_a_GegdZPqawGTuwtgEhh-eBgcpDEexOxwaFvMd5jdKjK5hugg5ZzOkdHg6ZL0okAxVic39xe5rK5CTbD4V3mAf6CB",
+            description: "Santuario de Lujo. Donde la alta cocina artesanal se encuentra con la serenidad absoluta.",
+            tags: ["HTML", "Tailwind CSS", "Design"],
+            link: "/burger-zen.html"
+        },
+        {
             title: "E-Commerce Analytics Dashboard",
             category: "Web Application",
             image: "/images/ecommerce.png",
             description: "Una plataforma integral de análisis para tiendas en línea, con visualización de datos en tiempo real y gestión de inventario.",
-            tags: ["React", "Tailwind CSS", "Recharts", "Node.js"]
+            tags: ["React", "Tailwind CSS", "Recharts", "Node.js"],
+            link: "#"
         },
         {
             title: "NeoBank Mobile App",
             category: "Mobile App",
             image: "/images/banking.png",
             description: "Aplicación bancaria de próxima generación con características de seguridad biométrica y gestión financiera personal.",
-            tags: ["React Native", "TypeScript", "Firebase"]
+            tags: ["React Native", "TypeScript", "Firebase"],
+            link: "#"
         },
         {
             title: "HealthCare Connect",
             category: "Healthcare Platform",
             image: "/images/healthcare.png",
             description: "Portal de pacientes seguro para programación de citas, telemedicina y acceso a registros médicos.",
-            tags: ["Next.js", "PostgreSQL", "WebRTC"]
+            tags: ["Next.js", "PostgreSQL", "WebRTC"],
+            link: "#"
         }
     ];
 
@@ -54,9 +65,14 @@ const Portfolio = () => {
                                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                                    <button className="p-2 bg-white rounded-full text-slate-900 hover:bg-primary hover:text-white transition-colors">
+                                    <a
+                                        href={project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="p-2 bg-white rounded-full text-slate-900 hover:bg-primary hover:text-white transition-colors"
+                                    >
                                         <ExternalLink size={20} />
-                                    </button>
+                                    </a>
                                     <button className="p-2 bg-white rounded-full text-slate-900 hover:bg-primary hover:text-white transition-colors">
                                         <Github size={20} />
                                     </button>

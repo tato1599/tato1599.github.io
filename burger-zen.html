@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Burger &amp; Zen Home v2 - Santuario de Lujo</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2590d",
+                        "accent-gold": "#d4af37",
+                        "background-light": "#fcfcfc",
+                        "background-dark": "#1a1310",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .gold-glow {
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(26, 19, 16, 0.6), rgba(26, 19, 16, 0.8));
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-[#1c120d] dark:text-[#fcf9f8] transition-colors duration-300">
+    <!-- Top Navigation Bar -->
+    <div
+        class="fixed top-0 w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-100 dark:border-white/5">
+        <div class="max-w-[1280px] mx-auto px-6 lg:px-20 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="size-8 text-primary">
+                    <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z">
+                        </path>
+                    </svg>
+                </div>
+                <h1 class="text-xl font-bold tracking-tight uppercase tracking-widest">Burger <span
+                        class="text-accent-gold">&amp;</span> Zen</h1>
+            </div>
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
+                    href="#">The Menu</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
+                    href="#">Spa Menu</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
+                    href="#">Our Concept</a>
+                <button
+                    class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-widest uppercase transition-all transform hover:scale-105">
+                    Reservar Experiencia
+                </button>
+            </nav>
+            <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined cursor-pointer hover:text-primary">search</span>
+                <div class="size-10 rounded-full border-2 border-accent-gold p-0.5 overflow-hidden">
+                    <div class="w-full h-full rounded-full bg-cover bg-center"
+                        data-alt="Close up of a luxury spa client profile"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCeuVRQIFwuPv08GxfZlaJ4tU4JhDkQNxjBON9nB2KvJtE6b3Ywv9CyAPCI8Wy_6iB-Kxp8GHoVR-vLM_OY9Y9A-oEekZ4zC-ri8NRh8R_SWmNGKjuFBH_Br8MI0TOButHb6mMVY408gE76RF4Nr3aD03G_PhKNXu2Gl0O-TfCQpWp_sCkUz6AQXKQfjI3pvKD0m1UkUln9K-VwIno1G-fhlqkRqAjLcZ7y7LPxh1b144ansim_RtigwVDVJp4ikcsJG00ngNSvyi6o");'>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Section with Background "Video" Feel -->
+    <section class="relative h-screen min-h-[700px] w-full flex items-center justify-center overflow-hidden">
+        <!-- Pseudo Video Background Overlay -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 hero-gradient z-10"></div>
+            <img class="w-full h-full object-cover" data-alt="Gourmet kitchen steam and spa tranquility montage"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo7j-UHW3vGuNVFnTC8liotEsqmE9S60tY7yBZBZQnQJ2dXhT2He8hL9Nt-t9DuTZItSyPWxGAdf79y183MiTeh2jwMyBmiNrYkHdZmXRt4iwZHpYV5XT0QOPY_pfbOo79htdSdTzK3uy7wjifeTZZCgz3DXs_psvxRKROklMRUgNb83MRlt_a_GegdZPqawGTuwtgEhh-eBgcpDEexOxwaFvMd5jdKjK5hugg5ZzOkdHg6ZL0okAxVic39xe5rK5CTbD4V3mAf6CB" />
+        </div>
+        <div class="relative z-20 text-center px-6 max-w-4xl">
+            <h2 class="text-white/80 text-sm md:text-base font-light tracking-[0.4em] uppercase mb-6 animate-pulse">
+                Dualismo Perfecto</h2>
+            <h1 class="text-white text-5xl md:text-7xl font-light leading-tight mb-8">
+                Tu santuario del <span class="italic font-normal text-accent-gold gold-glow">sabor</span> y el <span
+                    class="italic font-normal text-accent-gold gold-glow">relax</span>
+            </h1>
+            <p class="text-white/70 text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto leading-relaxed">
+                Donde la alta cocina artesanal se encuentra con la serenidad absoluta. Una experiencia sensorial única
+                en el corazón de la ciudad.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button
+                    class="min-w-[220px] bg-primary text-white py-4 rounded-lg font-bold uppercase tracking-widest hover:bg-primary/90 transition-all shadow-xl shadow-primary/20">
+                    Reservar Experiencia
+                </button>
+                <button
+                    class="min-w-[220px] bg-white/10 backdrop-blur-md text-white border border-white/20 py-4 rounded-lg font-bold uppercase tracking-widest hover:bg-white/20 transition-all">
+                    Ver Carta
+                </button>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/40 animate-bounce">
+            <span class="material-symbols-outlined text-4xl">keyboard_double_arrow_down</span>
+        </div>
+    </section>
+    <!-- Main Content Container with Wide Margins -->
+    <main class="max-w-[1280px] mx-auto px-6 lg:px-20 py-24">
+        <!-- Section Header -->
+        <div class="flex flex-col items-center text-center mb-20">
+            <div class="w-12 h-[1px] bg-accent-gold mb-6"></div>
+            <h3 class="text-3xl md:text-4xl font-light tracking-tight dark:text-white">Experiencias Destacadas</h3>
+            <p class="text-[#9c6549] mt-4 max-w-lg font-light">Selección curada para aquellos que buscan el equilibrio
+                entre el deleite y la paz.</p>
+        </div>
+        <!-- Featured Grid: Burger & Massage -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-32">
+            <!-- Featured Burger -->
+            <div
+                class="group relative flex flex-col gap-6 p-8 rounded-2xl bg-white dark:bg-white/5 border border-gray-100 dark:border-white/5 hover:border-accent-gold/30 transition-all duration-500 shadow-sm">
+                <div class="aspect-[16/10] overflow-hidden rounded-xl">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        data-alt="Gourmet truffle and brie burger close up"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4qFbENMg7qxcxmuYpqXv72-ZGCA1Ivor85rHet8v5EC_iyTgIfJWfeYr_Aie9bT5o00HpFy6EBSiMQOD5P1lJ_rfhf0ZW4VIuKz6et3DG-bE5yGbevtk_C2UnuLj0LQJOyX86LUzGyz4p-2Czzefbda5tbLZC8GHOHHlyaafv15yNruhPjffx3QglMJNIzM0ZOR86FDwhHje8M-hv6MKniBEylFhN_qAIKx7akjBbwrG68OgbJoEe1hCtvesbIwMiY5-p8vai4FGr" />
+                </div>
+                <div class="flex flex-col gap-3">
+                    <span class="text-xs font-bold text-primary tracking-[0.2em] uppercase">Culinary Excellence</span>
+                    <h4 class="text-2xl font-bold dark:text-white">La Burger del Mes: Truffle &amp; Brie</h4>
+                    <p class="text-[#9c6549] dark:text-[#9c6549]/80 font-light leading-relaxed">
+                        Carne madurada durante 45 días, crema de queso brie fundido al soplete y láminas frescas de
+                        trufa negra recolectada a mano. Un festín para los sentidos.
+                    </p>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-2xl font-light dark:text-white">€24.00</span>
+                        <a class="text-accent-gold font-bold text-sm tracking-widest uppercase border-b border-accent-gold/30 pb-1 hover:border-accent-gold transition-all"
+                            href="#">Explorar Menú</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Featured Massage -->
+            <div
+                class="group relative flex flex-col gap-6 p-8 rounded-2xl bg-white dark:bg-white/5 border border-gray-100 dark:border-white/5 hover:border-accent-gold/30 transition-all duration-500 shadow-sm">
+                <div class="aspect-[16/10] overflow-hidden rounded-xl">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        data-alt="Stones for hot stone massage therapy"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDswM0b9oXS21hduB1PDQxnhFHeHZX_tndZ5Of5U9xORzpPN4vlfSPaAvMPphl17mx2JZbD1TImGUphfVsowRWNv_Mo2H_E2SSEf9T-lScDTsBrmwffh04hMpS4kOVXQx9PhOtLeNIEdD1b-AW_YdOXrVhX8FZRvAxDzeYHKsO9sqOpeUrSsKLaVcbSZpSHSm2KDvMC1N_4ic33KamRq-NjA8zwCh7Zzp_BK2OL4nT373a_Hu9EuDc3uUxX2foeRo92riYNCftTVC6a" />
+                </div>
+                <div class="flex flex-col gap-3">
+                    <span class="text-xs font-bold text-primary tracking-[0.2em] uppercase">Wellness Sanctuary</span>
+                    <h4 class="text-2xl font-bold dark:text-white">El Masaje: Hot Stone Ritual</h4>
+                    <p class="text-[#9c6549] dark:text-[#9c6549]/80 font-light leading-relaxed">
+                        Terapia ancestral con piedras volcánicas calientes y aceites esenciales de sándalo. Diseñado
+                        para disolver la tensión y restaurar el flujo energético.
+                    </p>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-2xl font-light dark:text-white">€85.00</span>
+                        <a class="text-accent-gold font-bold text-sm tracking-widest uppercase border-b border-accent-gold/30 pb-1 hover:border-accent-gold transition-all"
+                            href="#">Reservar Spa</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feature Section: Dualismo -->
+        <section class="py-20 border-t border-gray-100 dark:border-white/5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="flex flex-col gap-8">
+                    <h2 class="text-4xl md:text-5xl font-light leading-tight dark:text-white">
+                        El Dualismo <span class="italic text-accent-gold">Perfecto</span>
+                    </h2>
+                    <p class="text-lg text-[#1c120d] dark:text-[#fcf9f8]/70 font-light leading-relaxed">
+                        Diseñamos un espacio donde el placer culinario y el bienestar físico coexisten en armonía. No es
+                        solo una cena, no es solo un masaje; es un ritual de reconexión.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4 group">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover:scale-125 transition-transform">restaurant</span>
+                            <span class="font-light tracking-wide">Ingredientes Prime de origen local</span>
+                        </li>
+                        <li class="flex items-center gap-4 group">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover:scale-125 transition-transform">spa</span>
+                            <span class="font-light tracking-wide">Ambiente Zen con diseño minimalista</span>
+                        </li>
+                        <li class="flex items-center gap-4 group">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover:scale-125 transition-transform">workspace_premium</span>
+                            <span class="font-light tracking-wide">Servicio VIP personalizado</span>
+                        </li>
+                    </ul>
+                    <div class="pt-6">
+                        <button
+                            class="bg-primary text-white px-10 py-4 rounded-lg font-bold tracking-widest uppercase hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                            Conocer más de nuestro concepto
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-accent-gold/10 rounded-full blur-3xl"></div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4 pt-12">
+                            <div class="aspect-[3/4] rounded-xl overflow-hidden shadow-2xl">
+                                <img class="w-full h-full object-cover" data-alt="Interior of minimalist zen restaurant"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4ZwNmkIMXzRPJO5FRMdg6NBOWuFIoV1-S7hlJyzZnp8CiaWZtAxdlNEGFivF5RSoMLkHV5Z9w8miUCfqkuQYH8qnX5Bss9nzMAbdgDdF1ZzgL-PlMwtzXPHUowfG60mjnNrbm_tsdo_9zwD_GkZSXlCLbpmqyj1D_jkF907pdwoqX8sE9vA0wtTTdkr73pHATXpZ0GtA-u8ljD82ETKwhWAXFs8AtftBHOuO3m4WbI-zwByLWdi9cFqtCeotxGFwW9xuJbfhGAfCY" />
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="aspect-[3/4] rounded-xl overflow-hidden shadow-2xl">
+                                <img class="w-full h-full object-cover" data-alt="Elegant spa treatment room"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHrX7vpGULYhTGR_-UtQQXfDB13N_NWXyDF9upxD_HOs_C3Q6DKiwLMJQBi6A38P1oP9XeqWWj_lkm7_k5M81-J0qafeVFhvS-fLadtJ07Bgh-ToNEKQcepNV7Lsi8zJHXQU5fYdV2voTMwuGrACvLhxVHLhmnRbjbnMVejsdHmIGPT-4gYjDqRC6YE63QV-g56ctk0qr5iltFtyhrdowcM4a6oqgtaNd7oYwfzoTyELgJwLhP4L7_whGTY5NHcR8WeMFEKSSikwRk" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonial Section -->
+        <section class="mt-32 py-20 bg-[#f4ebe7] dark:bg-white/5 rounded-3xl text-center px-10">
+            <span class="material-symbols-outlined text-accent-gold text-5xl mb-6">format_quote</span>
+            <blockquote class="max-w-3xl mx-auto">
+                <p class="text-2xl md:text-3xl font-light italic leading-relaxed dark:text-white">
+                    "La combinación perfecta que no sabía que necesitaba. Después de un masaje de tejido profundo, la
+                    hamburguesa de trufa sabe a gloria divina."
+                </p>
+                <cite class="block mt-8 text-sm font-bold tracking-[0.3em] uppercase not-italic text-primary">— El
+                    Crítico Gastronómico</cite>
+            </blockquote>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#1c120d] text-[#fcf9f8] py-20">
+        <div class="max-w-[1280px] mx-auto px-6 lg:px-20">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/10 pb-16">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="size-6 text-primary">
+                            <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h2 class="text-lg font-bold tracking-widest uppercase">Burger &amp; Zen</h2>
+                    </div>
+                    <p class="text-white/50 font-light leading-relaxed">
+                        Redefiniendo el lujo urbano a través de la gastronomía y el bienestar.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase tracking-widest mb-6 text-accent-gold">Navegación</h5>
+                    <ul class="space-y-4 text-white/60 font-light">
+                        <li><a class="hover:text-white transition-colors" href="#">Menú Gourmet</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Catálogo de Spa</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Membresías</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Ubicaciones</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase tracking-widest mb-6 text-accent-gold">Contacto</h5>
+                    <ul class="space-y-4 text-white/60 font-light">
+                        <li class="flex gap-3"><span class="material-symbols-outlined text-xs">location_on</span>
+                            Madrid, Calle de la Paz 22</li>
+                        <li class="flex gap-3"><span class="material-symbols-outlined text-xs">mail</span>
+                            hola@burgerandzen.com</li>
+                        <li class="flex gap-3"><span class="material-symbols-outlined text-xs">call</span> +34 912 345
+                            678</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase tracking-widest mb-6 text-accent-gold">Newsletter</h5>
+                    <p class="text-white/50 text-sm mb-4">Recibe invitaciones exclusivas.</p>
+                    <div class="flex">
+                        <input
+                            class="bg-white/5 border-white/10 rounded-l-lg w-full focus:ring-primary focus:border-primary"
+                            placeholder="Tu email" type="email" />
+                        <button class="bg-primary px-4 rounded-r-lg hover:bg-primary/90 transition-colors">
+                            <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6 text-white/30 text-xs tracking-widest uppercase">
+                <p>© 2024 Burger &amp; Zen. Todos los derechos reservados.</p>
+                <div class="flex gap-8">
+                    <a class="hover:text-white transition-colors" href="#">Privacidad</a>
+                    <a class="hover:text-white transition-colors" href="#">Términos</a>
+                    <a class="hover:text-white transition-colors" href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

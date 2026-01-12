@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Phone, Send, Loader2 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = ({ id }) => {
     const [formData, setFormData] = useState({
@@ -20,11 +21,36 @@ const Contact = ({ id }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate sending
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        setIsSubmitting(false);
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        alert('¡Mensaje enviado con éxito!');
+
+        // Credenciales desde variables de entorno (.env)
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+        // Objeto con los datos para la plantilla
+        // Asegúrate de que tu plantilla en EmailJS use estas variables: {{name}}, {{email}}, {{subject}}, {{message}}
+        const templateParams = {
+            from_name: formData.name,
+            from_email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+        };
+
+        try {
+            if (serviceId === 'YOUR_SERVICE_ID') {
+                throw new Error('Por favor configura tus credenciales de EmailJS en el código.');
+            }
+
+            await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+            setFormData({ name: '', email: '', subject: '', message: '' });
+            alert('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.');
+        } catch (error) {
+            console.error('Error al enviar el correo:', error);
+            alert('Hubo un error al enviar el mensaje. Por favor intenta de nuevo más tarde o contáctanos directamente por correo.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const contactInfo = [
